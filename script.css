@@ -1,0 +1,132 @@
+<!-- 
+Basic Requirements:
+- Domain Name (e.g., yourname.com)
+- Web Hosting Platform (Netlify, Vercel, GitHub Pages)
+- Version Control (Git & GitHub)
+- Design Tools (Figma or Sketch for mockups)
+- Code Editor (VS Code)
+- Responsive Design (Mobile-first approach)
+- SEO Optimization (meta tags, sitemap.xml)
+- Analytics (Google Analytics or similar)
+- Performance (minification, lazy loading)
+- SSL Certificate (HTTPS)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI/ML Engineer Portfolio - [Your Name]">
+  <title>AI/ML Portfolio | [Your Name]</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md fixed w-full z-20" data-aos="fade-down">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <div class="text-2xl font-bold text-indigo-600">Honey Chaturvedi</div>
+      <div class="space-x-8 hidden md:flex">
+        <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+        <a href="#projects" class="text-gray-700 hover:text-indigo-600 transition">Projects</a>
+        <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+      </div>
+      <div class="md:hidden">
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+      <a href="#projects" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Projects</a>
+      <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('images/ai_image.jpg');" data-aos="zoom-in">
+    <div class="text-center text-white p-8 rounded-lg bg-black bg-opacity-50 backdrop-blur-sm">
+      <h1 class="text-6xl font-extrabold mb-4">Hi, Honey Chaturvedi</h1>
+      <p class="text-2xl mb-6"><span id="typed"></span></p>
+      <a href="#projects" class="px-8 py-3 bg-white text-indigo-600 rounded-full font-semibold hover:shadow-lg transition">View My Work</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-6 text-indigo-600">About Me</h2>
+    <p class="text-lg leading-relaxed">
+      I'm an AI/ML Engineer specializing in building scalable machine learning models, robust data pipelines, and deploying cloud-native solutions. 
+      Proficient in <span class="font-semibold">Python</span>, <span class="font-semibold">TensorFlow</span>, <span class="font-semibold">PyTorch</span>, AWS & GCP.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white" data-aos="fade-up" data-aos-delay="100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-8 text-center text-indigo-600">Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Example Project Card -->
+        <div class="bg-gray-50 shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition" data-aos="flip-left">
+          <img src="project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Project Title</h3>
+            <p class="text-gray-600 mb-4">Brief description of the project, technologies used, and impact.</p>
+            <a href="#" class="text-indigo-600 hover:underline font-medium">View Details →</a>
+          </div>
+        </div>
+        <!-- Repeat project cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-6 text-indigo-600">Get In Touch</h2>
+    <p class="mb-6">Feel free to connect or download my resume below.</p>
+    <div class="flex justify-center space-x-4">
+      <a href="resume.pdf" class="px-6 py-3 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition">Download Resume</a>
+      <a href="mailto:your.email@example.com" class="px-6 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition">Email Me</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-200 text-center text-gray-700">
+    © 2025 [Your Name]. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var typed = new Typed('#typed', {
+        strings: ['AI/ML Engineer', 'Data Scientist'],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true
+      });
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    // Mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</body>
+
+ 
+
